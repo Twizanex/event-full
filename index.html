@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>events</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/custom_form.js"></script>
+
+    <script type='text/javascript'>
+        $(function() {
+            $("#tabs").organicTabs({ "speed": 200 });
+        });
+
+        $(document).ready(function(){
+            $('input[placeholder], textarea[placeholder]').placeholder();
+
+            $('.minimizedBar, .minimizeBar').click(function () {
+                $('.headContent').slideToggle(400);
+                $('.minimizeBar'). toggle();
+                $('.minimizedBar').toggle();
+                $('#teeth').slideToggle(400);
+            });
+
+            $('#select1, #select2, #select3').each(function(){
+                customForm.style(this);
+            })
+        })
+    </script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="js/PIE_IE678.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[type=checkbox]').change(function(){
+                if(this.checked)
+                    $('label[for=' + this.id + ']').addClass('checked');
+                else
+                    $('label[for=' + this.id + ']').removeClass('checked');
+            }).each(function(){
+                if(this.checked)
+                    $('label[for=' + this.id + ']').addClass('checked');
+            })
+
+
+        })
+        function cleanupPIE() {
+            try {
+                var PIE = window[ 'PIE' ];
+                if (PIE) {
+                    PIE['detach']( el );
+                    PIE = el = 0;
+                }
+            } catch (e) {}
+        }
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div id="events" class="wrapper">
+    <div id="header">
+        <div class="headBar"></div>
+        <div class="headShadow"></div>
+        <div class="headTitle">
+            <div class="headIcon"></div>
+            <div class="title"></div>
+            <a class="adminBtn" href="#"><b>admin</b> control panel</a>
+        </div>
+        <div class="headContent" style="display: block;">
+            <img src="img/photo1.png"/>
+            <p class="describe">
+                GMAT Club has partnered with premier GMAT companies tp deliver to you the best discounts in the
+                industry. Click on the logos below to explore each offer. Please note that when you purchase a
+                course from one of our partners, you will also receive a $250 bonus offer from GMAT Club. Need more
+                information about our partners? Check out the <a href="#">GMAT Course Reviews</a> to hear what
+                others have to say.
+            </p>
+        </div>
+        <div id="teeth" class="teeth" style="display: none;"></div>
+        <div class="minimizeBar">
+            <a href="#">click to minimize this tab</a>
+        </div>
+        <div class="minimizedBar" style="display: none;">
+            <a href="#">click to detail information</a>
+        </div>
+    </div>
+    <div id="section">
+        <div class="navBar">
+            <div class="upShadow"></div>
+            <div class="links">
+                <span class="unit1">want to add your events?</span>
+                <a class="unit2" href="#">contact us</a>
+            </div>
+            <div class="downShadow"></div>
+        </div>
+        <div id="tabs">
+            <ul class="nav">
+                <li><a href="#search" class="current moveLeft">SEARCH</a></li>
+                <li><a href="#advanced-search" class="adxSearch">Advanced search</a></li>
+                <li><a href="#discounts" class="moveRight">Discounts</a></li>
+            </ul>
+            <div class="wrap-list">
+                <div id="search">
+                    <div class="testType">
+                        <div>
+                            <p><input type="checkbox" id="check17"><label for="check17">GMAT: Verbal</label></p>
+                            <p><input type="checkbox" id="check18"><label for="check18">GMAT: Quantitative</label></p>
+                        </div>
+                        <div>
+                            <p><input type="checkbox" id="check19"><label for="check19">MBA</label></p>
+                            <p><input type="checkbox" id="check20"><label for="check20">Announcement</label></p>
+                        </div>
+                    </div>
+                    <div class="locationPlace">
+                        <div class="caption">Location:</div>
+                        <div class="description">
+                            <input class="textInput" placeholder="Enter city" type="text">
+                        </div>
+                        <div class="description1">
+                            <input type="checkbox" id="check21"><label for="check21">Include cities within</label>
+                            <select id="select3">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>40</option>
+                                <option selected="selected">50</option>
+                            </select>
+                            <label for="select3">miles</label>
+                        </div>
+                    </div>
+                    <div class="datePlace">
+                        <div class="caption">Date:</div>
+                        <div class="description">
+                            <label class="dateLabel5" for="dateInput1">From</label>
+                            <input id="dateInput5" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                            <img src="img/arrow.png" />
+                            <label class="dateLabel6" for="dateInput2">to</label>
+                            <input id="dateInput6" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                        </div>
+                    </div>
+                    <div class="schoolPlace">
+                        <div class="addedSchools">
+                            <span>Stanford GSB</span><span class="remove"></span><br/>
+                            <span>Columbia</span><span class="remove"></span><br/>
+                            <span>The Consortium</span><span class="remove"></span><br/>
+                        </div>
+                        <div class="caption">School:</div>
+                        <div class="description captionForm">
+                            <input class="textInput" placeholder="Enter school name" type="text">
+                            <a class="addBtn" href="#">+ add</a>
+                        </div>
+                    </div>
+                    <div class="searchBar">
+                        <div class="right;">
+                            <input type="submit" />
+                            <div class="searchBtn">search</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="advanced-search" class="hide">
+                    <div class="testType">
+                        <div>
+                            <p><input type="checkbox" id="check1"><label for="check1">GMAT: Verbal</label></p>
+                            <p><input type="checkbox" id="check2"><label for="check2">GMAT: Quantitative</label></p>
+                        </div>
+                        <div>
+                            <p><input type="checkbox" id="check3"><label for="check3">MBA</label></p>
+                            <p><input type="checkbox" id="check4"><label for="check4">Announcement</label></p>
+                        </div>
+                    </div>
+                    <div class="keywordsPlace">
+                        <div class="caption">Keywords:</div>
+                        <div class="description"><input class="textInput" type="text"></div>
+                    </div>
+                    <div class="locationPlace">
+                        <div class="caption">Location:</div>
+                        <div class="description">
+                            <input class="textInput" placeholder="Enter city" type="text">
+                        </div>
+                        <div class="description1">
+                            <input type="checkbox" id="check5"><label for="check5">Include cities within</label>
+                            <select id="select1">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>40</option>
+                                <option selected="selected">50</option>
+                            </select>
+                            <label for="select1">miles</label>
+                        </div>
+                    </div>
+                    <div class="datePlace">
+                        <div class="caption">Date:</div>
+                        <div class="description">
+                            <label class="dateLabel1" for="dateInput1">From</label>
+                            <input id="dateInput1" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                            <img src="img/arrow.png" />
+                            <label class="dateLabel2" for="dateInput2">to</label>
+                            <input id="dateInput2" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                        </div>
+                    </div>
+                    <div class="schoolPlace">
+                        <div class="addedSchools">
+                            <span>Stanford GSB</span><span class="remove"></span><br/>
+                            <span>Columbia</span><span class="remove"></span><br/>
+                            <span>The Consortium</span><span class="remove"></span><br/>
+                        </div>
+                        <div class="caption">School:</div>
+                        <div class="description captionForm">
+                            <input class="textInput" placeholder="Enter school name" type="text">
+                            <a class="addBtn" href="#">+ add</a>
+                        </div>
+                    </div>
+                    <div class="typePlace">
+                        <div class="caption captionFix">Type:</div>
+                        <div class="description">
+                            <div class="typeLeftColumn">
+                                <p><input type="checkbox" id="check6" onclick=""><label for="check6">School Application Date</label></p>
+                                <p><input type="checkbox" id="check7"><label for="check7">School Decision Date</label></p>
+                            </div>
+                            <div class="typeRightColumn">
+                                <p><input type="checkbox" id="check8"><label for="check8">Discounts</label></p>
+                                <p><input type="checkbox" id="check9"><label for="check9">Other (e.g. MBA tour or reception)</label></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accessPlace">
+                        <div class="caption">Access:</div>
+                        <div class="description">
+                            <p><input type="checkbox" id="check10"><label for="check10">Free</label></p>
+                            <p><input type="checkbox" id="check11"><label for="check11">Paid</label></p>
+                        </div>
+                    </div>
+                    <div class="formatPlace">
+                        <div class="caption">Format:</div>
+                        <div class="description">
+                            <p class="largeInput"><input type="checkbox" id="check12"><label for="check12">Meeting (offline)</label></p>
+                            <p class="largeInput"><input type="checkbox" id="check13"><label for="check13">Seminar (offline)</label></p>
+                            <p class="smallInput"><input type="checkbox" id="check14"><label for="check14">Webinar</label></p>
+                            <p class="smallInput"><input type="checkbox" id="check15"><label for="check15">Chat</label></p>
+                        </div>
+                    </div>
+                    <div class="searchBar">
+                        <div class="right;">
+                            <input type="submit" />
+                            <div class="searchBtn">search</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="discounts" class="hide">
+                    <div class="locationPlace">
+                        <div class="caption">Location:</div>
+                        <div class="description">
+                            <input class="textInput" placeholder="Enter city" type="text">
+                        </div>
+                        <div class="description1">
+                            <input type="checkbox" id="check16"><label for="check16">Include cities within</label>
+                            <select id="select2">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>40</option>
+                                <option selected="selected">50</option>
+                            </select>
+                            <label for="select2">miles</label>
+                        </div>
+                    </div>
+                    <div class="datePlace">
+                        <div class="caption">Date:</div>
+                        <div class="description">
+                            <label class="dateLabel3" for="dateInput1">From</label>
+                            <input id="dateInput3" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                            <img src="img/arrow.png" />
+                            <label class="dateLabel4" for="dateInput2">to</label>
+                            <input id="dateInput4" placeholder="mm / dd / yy" type="text">
+                            <span class="calendarIcon"></span>
+                        </div>
+                    </div>
+                    <div class="schoolPlace">
+                        <div class="addedSchools">
+                            <span>Stanford GSB</span><span class="remove"></span><br/>
+                            <span>Columbia</span><span class="remove"></span><br/>
+                            <span>The Consortium</span><span class="remove"></span><br/>
+                        </div>
+                        <div class="caption">School:</div>
+                        <div class="description captionForm">
+                            <input class="textInput" placeholder="Enter school name" type="text">
+                            <a class="addBtn" href="#">+ add</a>
+                        </div>
+                    </div>
+                    <div class="searchBar">
+                        <div class="right;">
+                            <input type="submit" />
+                            <div class="searchBtn">search</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="results">
+            <div class="unit">
+                <div class="aside">
+                    <div class="frame">
+                        <div class="label"></div>
+                        <img src="img/unit_photo1.png" />
+                    </div>
+                </div>
+                <div class="content">
+                    <h3><a href="#">Mar 28, 2013: Chosing the Right B-school presented by mbaMission the Right B-school (london Center) </a> <span>By  <a href="#">Knewton Gmat</a></span></h3>
+                    <p class="date"><b>January 26</b>, 2013</p>
+                    <p class="time"><b>12:00 PM</b> in EST</p>
+                    <p class="place"><b>Chicago, Illinois</b></p>
+                    <p class="tags">
+                        <span>GMAT</span>
+                        <span>Other</span>
+                        <span>Free</span>
+                        <span>mbaMission</span>
+                        <span>Chat</span>
+                        <span>Chicago Gmat Prep</span>
+                    </p>
+                    <p class="schools">
+                        school: <span>Harvard Business School</span>
+                    </p>
+                    <a class="discountBtn" href="#">get discount</a>
+                </div>
+            </div>
+            <div class="unit">
+                <div class="aside">
+                    <div class="frame">
+                        <img src="img/unit_photo2.png" />
+                    </div>
+                </div>
+                <div class="content">
+                    <h3><a href="#">Chosing the right B-school presented by mbaMission</a></h3>
+                    <p class="date"><b>January 26</b>, 2013</p>
+                    <p class="time"><b>12:00 PM</b> in EST</p>
+                    <p class="place"><b>Chicago, Illinois</b></p>
+                    <p class="tags">
+                        <span>GMAT</span>
+                        <span>Other</span>
+                        <span>Free</span>
+                        <span>mbaMission</span>
+                        <span>Chat</span>
+                        <span>Chicago Gmat Prep</span>
+                    </p>
+                    <p class="schools">
+                        school: <span>Harvard Business School</span>
+                    </p>
+                    <a class="registerBtn" href="#">register</a>
+                </div>
+            </div>
+            <div class="unit">
+                <div class="aside">
+                    <div class="frame">
+                        <img src="img/unit_photo3.png" />
+                    </div>
+                </div>
+                <div class="content">
+                    <h3><a href="#">Assessing Your MBA Profile presented by mbaMission (Live Online Classroom)</a></h3>
+                    <p class="date"><b>January 26</b>, 2013</p>
+                    <p class="time"><b>12:00 PM</b> in EST</p>
+                    <p class="place"><b>Chicago, Illinois</b></p>
+                    <p class="tags">
+                        <span>GMAT</span>
+                        <span>Other</span>
+                        <span>Free</span>
+                        <span>mbaMission</span>
+                        <span>Chat</span>
+                        <span>Chicago Gmat Prep</span>
+                    </p>
+                    <p class="schools">
+                        school: <span>Harvard Business School</span>
+                    </p>
+                    <a class="registerBtn" href="#">register</a>
+                </div>
+            </div>
+            <div class="unit last">
+                <div class="aside">
+                    <div class="frame">
+                        <img src="img/unit_photo4.png" />
+                    </div>
+                </div>
+                <div class="content">
+                    <h3><a href="#">Leverage Your Financial Background in Your MBA Applications</a></h3>
+                    <p class="date"><b>January 26</b>, 2013</p>
+                    <p class="time"><b>12:00 PM</b> in EST</p>
+                    <p class="place"><b>Chicago, Illinois</b></p>
+                    <p class="tags">
+                        <span>GMAT</span>
+                        <span>Other</span>
+                        <span>Free</span>
+                        <span>mbaMission</span>
+                        <span>Chat</span>
+                        <span>Chicago Gmat Prep</span>
+                    </p>
+                    <p class="schools">
+                        school: <span>Harvard Business School</span>
+                    </p>
+                    <a class="registerBtn" href="#">register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerShadow"></div>
+        <div class="statistic">
+            <img src="img/gmat_club_logo.png" alt="GMAT Club" />
+            <p class="text1">GMAT Club <span>Community of over</span> 180,000 members</p>
+            <p class="text2"><span>Who have access</span> to useful toolkit & resources for GMAT Score improvement</p>
+            <a href="#">www.gmatclub.com</a>
+        </div>
+        <div class="lowBar"></div>
+        <div class="copyrightInfo">
+            <div class="copyright">
+                <a href="#"><img class="footerLogo" src="img/gmat_club_logo_small.png" alt="GMAT Club" /></a>
+                <div class="leftSide">
+                    <a href="#">Copyright &copy; GMAT Club<br />
+                                Club GMAT &copy; is a registered trademark of the Graduate Management Admission<br />
+                                Council GMAT Club's website has not been reviewed or endorsed by GMAC</a>
+                </div>
+                <div class="rightSide">
+                    <a href="#"><img class="deepLogo" src="img/deep_logo_small.png" alt="Deep" /></a>
+                    <a href="#">&copy; DeeP 2013 Web Design & Development</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="test"></div>
+</div>
+</body>
+</html>
