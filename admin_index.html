@@ -8,9 +8,16 @@
     <script type="text/javascript" src="js/tabs.js"></script>
     <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
     <script type="text/javascript" src="js/custom_form.js"></script>
+    <script type='text/javascript'>
+        $(function() {
+            $("#adminTabs").organicTabs({ "speed": 200 });
+        });
+    </script>
 </head>
 <body>
 <div id="events" class="wrapper">
+    <div class="headBar"></div>
+    <div class="adminHeadShadow"></div>
     <div id="adminTabs">
         <ul class="nav">
             <li><a href="#events-admin" class="">Events</a></li>
