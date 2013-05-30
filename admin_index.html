@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>events</title>
+    <title>Admin control panel</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/tabs.js"></script>
@@ -12,28 +12,143 @@
         $(function() {
             $("#adminTabs").organicTabs({ "speed": 200 });
         });
+
+        $(document).ready(function(){
+            $('.hideAction, .showAction').click(function () {
+                $('.eventsList').slideToggle(400);
+                $('.hideAction'). toggle();
+                $('.showAction').toggle();
+                $('#teeth').slideToggle(400);
+            });
+            $('#selectPartner').each(function(){
+                customForm.style(this);
+            });
+            $('input[placeholder], textarea[placeholder]').placeholder();
+        })
     </script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="js/PIE_IE678.js"></script>
+    <script>
+        function cleanupPIE() {
+            try {
+                var PIE = window[ 'PIE' ];
+                if (PIE) {
+                    PIE['detach']( el );
+                    PIE = el = 0;
+                }
+            } catch (e) {}
+        }
+    </script>
+    <![endif]-->
 </head>
 <body>
 <div id="events" class="wrapper">
-    <div class="headBar"></div>
-    <div class="adminHeadShadow"></div>
-    <div id="adminTabs">
-        <ul class="nav">
-            <li><a href="#events-admin" class="">Events</a></li>
-            <li><a href="#partners" class="">Partners</a></li>
-            <li><a href="#editors" class="">Editors</a></li>
-            <li><a href="#help" class="">Need Help?</a></li>
-        </ul>
-        <div class="wrap-list">
-            <div id="events-admin">
-
+    <div id="header">
+        <div class="headBar"></div>
+        <div class="adminHeadShadow"></div>
+    </div>
+    <div id="section">
+        <div id="adminTabs">
+            <a href="index.html"><span class="icon"></span>Events Search</a>
+            <ul class="nav">
+                <li><a href="#events-admin" class="current moveLeft">Events</a></li>
+                <li><a href="#partners" class="">Partners</a></li>
+                <li><a href="#editors" style="right: 1px">Editors</a></li>
+                <li><a href="#help" class="moveRight">Need Help?</a></li>
+            </ul>
+            <div class="wrap-list">
+                <div id="events-admin">
+                    <div class="synchronizeInfo">
+                        <h4>Synchronize info</h4>
+                        <div class="content">
+                            <h4>Synchronization is done</h4>
+                            <p><strong>11 events</strong> were updated:</p>
+                            <ul class="eventsList" style="display: block">
+                                <li><a href="#">Which MBA? Fair</a></li>
+                                <li><a href="#">Bootcamp: MBA Application Basic Training</a></li>
+                                <li><a href="#">Biggest MBA Application Myths</a></li>
+                                <li><a href="#">MBA Essay Writing Workshop</a></li>
+                                <li><a href="#">Free GMAT Prep Webinar</a></li>
+                                <li><a href="#">Which MBA? Fair</a></li>
+                                <li><a href="#">Bootcamp: MBA Application Basic Training</a></li>
+                                <li><a href="#">Biggest MBA Application Myths</a></li>
+                                <li><a href="#">MBA Essay Writing Workshop</a></li>
+                                <li><a href="#">Free GMAT Prep Webinar</a></li>
+                            </ul>
+                            <div id="teeth" class="teeth" style="display: none;"></div>
+                            <div class="hideAction">
+                                <a href="#">Click to hide this tab</a>
+                            </div>
+                            <div class="showAction" style="display: none">
+                                <a href="#">Click to details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addEvent">
+                        <a class="eventsWaiting" href="#">16 Events waiting</a>
+                        <span> for approval</span>
+                        <a class="showEventsLink" href="#">show</a>
+                        <a class="addEventBtn" href="#"><b>Add</b> event</a>
+                    </div>
+                    <div class="synchronizeAction">
+                        <a href="#">synchronize</a>
+                    </div>
+                    <div class="showEvents">
+                        <h4>Show events</h4>
+                        <table cellpadding="0" cellspacing="0">
+                            <tr class="header">
+                                <td class="column1">By name:</td>
+                                <td class="column2">By Date:</td>
+                                <td class="column3">By partner:</td>
+                            </tr>
+                            <tr class="forms">
+                                <td>
+                                    <input class="nameInput" placeholder="type here" type="text">
+                                </td>
+                                <td>
+                                    <input id="someID" class="dateInput" placeholder="mm / dd / yy" type="text">
+                                    <span class="calendarIcon noMargin"></span>
+                                    <span class="arrowRight"></span>
+                                    <input id="someID1" class="dateInput" placeholder="mm / dd / yy" type="text">
+                                    <span class="calendarIcon noMargin"></span>
+                                </td>
+                                <td>
+                                    <select id="selectPartner">
+                                        <option selected="selected">Knewton GMAT</option>
+                                        <option>partner1</option>
+                                        <option>partner2</option>
+                                        <option>partner3</option>
+                                        <option>partner4</option>
+                                        <option>partner5</option>
+                                    </select>
+                                    <a class="showBtn" href="#">show</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pagination"></div>
+                    <div class="eventsList">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr class="header">
+                                <td class="column1">Event name</td>
+                                <td class="column2 sortedBy">Event date</td>
+                                <td class="column3">Partner</td>
+                                <td class="column4">Editor</td>
+                                <td class="column5">Publish date</td>
+                                <td class="column6">Approved</td>
+                                <td class="column7">Delete</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+                <div id="partners" class="hide">Here would be some content</div>
+                <div id="editors" class="hide">And here would be some content</div>
+                <div id="help" class="hide">Need help? Oops! Unfortunately we can't help you</div>
             </div>
-            <div id="partners">Here would be some content</div>
-            <div id="editors">And here would be some content</div>
-            <div id="help">Need help? Oops! Unfortunately we can't help you</div>
         </div>
     </div>
+
 </div>
 </body>
 </html>
