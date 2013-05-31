@@ -19,7 +19,8 @@ body img {
     border: none;
 }
 /*for IE 8*/
-body h4 {
+body h4,
+body h2{
     margin: 0;
     padding: 0;
     font-family: "Open Sans", Geneva, sans-serif;
@@ -504,7 +505,27 @@ td {
 .results .unit:hover {
     background: url("../img/unit_hover_bg.png") repeat-x #f3f3eb;
 }
-
+.results .notFound {
+    font-family: "Open Sans",sans-serif;
+    border-top: 1px solid #eae9d8;
+    border-bottom: 1px solid #EAE9D8;
+    height: 115px;
+    width: 100%;
+    float: left;
+    background: url("../img/not-found-shadow.png") repeat-x #f8ebeb;
+    margin-bottom: 1px;
+}
+.results .notFound h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-top: 29px;
+    text-align: center;
+}
+.results .notFound > p {
+    font-size: 14px;
+    text-align: center;
+}
 .aside {
     width: 150px;
     float: left;
@@ -1081,52 +1102,113 @@ td {
     top: 1px;
 }
 
-#events-admin .eventsList table {
+#events-admin .eventsTable table {
     width: 100%;
 }
-#events-admin .eventsList table .header {
+#events-admin .eventsTable table .header {
     font-size: 10px;
     line-height: 20px;
 }
-#events-admin .eventsList table .header td {
+#events-admin .eventsTable table .header td {
     background-color: #b8b8b8;
+    border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
     cursor: pointer;
 }
-#events-admin .eventsList table .header td:hover {
+#events-admin .eventsTable table .header td:hover {
     background-color: #d1d1d1;;
 }
 
-#events-admin .eventsList table .header .column1 {
+#events-admin .eventsTable table .column1 {
     width: 273px;
     text-indent: 24px;
 }
-#events-admin .eventsList table .header .column2 {
-    width: 112px;
+#events-admin .eventsTable table .column2 {
+    width: 110px;
     text-indent: 15px;
 }
-#events-admin .eventsList table .header .column3 {
-    width: 108px;
-    text-indent: 14px;
+#events-admin .eventsTable table .column3 {
+    width: 110px;
+    text-indent: 10px;
 }
-#events-admin .eventsList table .header .column4 {
-    width: 100px;
-    text-indent: 15px;
+#events-admin .eventsTable table .column4 {
+    width: 105px;
+    text-indent: 10px;
 }
-#events-admin .eventsList table .header .column5 {
-    width: 67px;
+#events-admin .eventsTable table .column5 {
+    width: 72px;
     text-align: center;
 }
-#events-admin .eventsList table .header .column6 {
-    width: 70px;
+#events-admin .eventsTable table .column6 {
+    width: 65px;
     text-align: center;
 }
-#events-admin .eventsList table .header .column7 {
+#events-admin .eventsTable table .column7 {
     text-align: center;
 }
 .sortedBy {
     background-color: #d1d1d1 !important;
 }
+#events-admin .eventsTable table .bodyRow {
+    font-size: 12px;
+    line-height: 34px;
+    background-color: #f5f5eb;
+}
+#events-admin .eventsTable table .bodyRow td {
+    border-bottom: 1px solid #dbdbdb;
+    border-collapse: collapse;
+}
+#events-admin .eventsTable table .bodyRow .column1 {
+    font-weight: bold;
+}
+#events-admin .eventsTable table .bodyRow .column2 p {
+    font-size: 10px;
+    line-height: 13px;
+}
+#events-admin .eventsTable table .bodyRow .column5 p {
+    font-size: 10px;
+}
+#events-admin .eventsTable table .bodyRow .column3 a {
+    text-decoration: none;
+}
+#events-admin .eventsTable table .bodyRow .column7 .deleteBtn form input {
+    bottom: 8px;
+    cursor: pointer;
+    height: 15px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    padding: 0;
+    position: relative;
+    width: 15px;
+}
+#events-admin .eventsTable table .bodyRow .column7 .deleteBtn {
+    background: url("../img/admin_sprite.png") no-repeat scroll -132px -4px transparent;
+    height: 8px;
+    margin-left: 30px;
+    width: 8px;
+}
+#events-admin .eventsTable table .bodyRow .column7 .deleteBtn:hover {
+    background: url('../img/admin_sprite.png') no-repeat -145px -4px;
+    width: 8px;
+    height: 8px;
+}
+#events-admin .eventsTable table .bodyRow.hover {
+    background-color: #fef6b0;
+
+}
+#events-admin .eventsTable table .bodyRow.hover td {
+    border-bottom: 1px solid #a6a6a6;
+    border-collapse: collapse;
+    border-top: 1px solid #a6a6a6;
+}
+#events-admin .eventsTable table .bodyRow.hoverPrev td {
+    border-bottom: none;
+    background: url("../img/up-shadow-hover.png") repeat-x scroll bottom center #F5F5EB;
+}
+#events-admin .eventsTable table .bodyRow.hoverNext td {
+    background: url("../img/down-shadow-hover.png") repeat-x scroll top center #F5F5EB;
+}
+
 /*----- Buttons -----*/
 #events-admin .addEvent .addEventBtn {
     background: url('../img/admin_sprite.png') no-repeat -3px -23px;
