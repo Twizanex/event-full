@@ -9,21 +9,33 @@
     <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
     <script type="text/javascript" src="js/custom_form.js"></script>
     <script type='text/javascript'>
-        $(function() {
-            $("#adminTabs").organicTabs({ "speed": 200 });
-        });
-
         $(document).ready(function(){
+            $("#adminTabs").organicTabs({ "speed": 200 });
+
             $('.hideAction, .showAction').click(function () {
                 $('.eventsList').slideToggle(400);
                 $('.hideAction'). toggle();
                 $('.showAction').toggle();
                 $('#teeth').slideToggle(400);
             });
+
             $('#selectPartner').each(function(){
                 customForm.style(this);
             });
+
             $('input[placeholder], textarea[placeholder]').placeholder();
+
+            $('.bodyRow').hover(function(){
+                $(this).addClass('hover');
+                $(this).prev('.bodyRow').addClass('hoverPrev');
+                $(this).next('.bodyRow').addClass('hoverNext');
+                if($(this).index() == 1)
+                    $(this).children('td').css('border-top', 'none');
+            }, function(){
+                $(this).removeClass('hover');
+                $(this).prev('.bodyRow').removeClass('hoverPrev');
+                $(this).next('.bodyRow').removeClass('hoverNext');
+            });
         })
     </script>
     <!--[if lte IE 8]>
@@ -127,16 +139,272 @@
                         </table>
                     </div>
                     <div class="pagination"></div>
-                    <div class="eventsList">
+                    <div class="eventsTable">
                         <table cellpadding="0" cellspacing="0">
                             <tr class="header">
                                 <td class="column1">Event name</td>
-                                <td class="column2 sortedBy">Event date</td>
+                                <td class="column2">Event date</td>
                                 <td class="column3">Partner</td>
                                 <td class="column4">Editor</td>
                                 <td class="column5">Publish date</td>
                                 <td class="column6">Approved</td>
                                 <td class="column7">Delete</td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Which MBA? Fair</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-24</p>
+                                    <p class="timeFormat"></p>
+                                </td>
+                                <td class="column3"><a href="#">StratusPrep</a></td>
+                                <td class="column4"><a href="#">Андрій Лисий</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Bootcamp: MBA Application Basic cou...</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">StratusPrep</a></td>
+                                <td class="column4"><a href="#">Андрій Лисий</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Biggest MBA Application Myths</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">Manhattan GMAT</a></td>
+                                <td class="column4"><a href="#">Андрій Лисий</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">MBA Essay Writing Workshop</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-24</p>
+                                    <p class="timeFormat"></p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">Lysyy AndriyTes</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Free GMAT Prep Webinar</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">StratusPrep</a></td>
+                                <td class="column4"><a href="#">Lysyy AndriyTes</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">G-Matt Mondays</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">Lysyy AndriyTes</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Biggest MBA Application Myths pavle...</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">Manhattan GMAT</a></td>
+                                <td class="column4"><a href="#">CheFISH</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Hi MBA</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-24</p>
+                                    <p class="timeFormat"></p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">CheFISH</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">B-School Application forum!</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">Magoosh</a></td>
+                                <td class="column4"><a href="#">Anakin Skywalker</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Selling new Kaplan course book & Tex...</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">Darth Vader</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">My GMAT and BSchool Tips</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">e-GMAT</a></td>
+                                <td class="column4"><a href="#">BTR</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">GMAT in Denver?</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">Kaplan</a></td>
+                                <td class="column4"><a href="#">BTR</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">B-School Application forum!</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-24</p>
+                                    <p class="timeFormat"></p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">BTR</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">Buy/Sell Books and Find Study Gr fve...</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">BTR</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">(no subject)</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-19</p>
+                                    <p class="timeFormat">22:11:00 [+03:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">GMATClub</a></td>
+                                <td class="column4"><a href="#">Chubaka</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bodyRow">
+                                <td class="column1"><a href="#">I live in Westminter, but I could mod ...</a></td>
+                                <td class="column2">
+                                    <p class="dateFormat">2013-05-30</p>
+                                    <p class="timeFormat">20:11:00 [-05:00]</p>
+                                </td>
+                                <td class="column3"><a href="#">Kaplan</a></td>
+                                <td class="column4"><a href="#">CheFISH</a></td>
+                                <td class="column5"><p class="dateFormat">2013-05-24</p></td>
+                                <td class="column6"></td>
+                                <td class="column7">
+                                    <div class="deleteBtn">
+                                        <input type="submit" title="Click to delete" />
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>
