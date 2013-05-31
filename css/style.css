@@ -1292,3 +1292,76 @@ td {
     border-top: 1px solid #ecebdb;
     border-bottom: 1px solid #ebeadb;
 }
+.pagination ul {
+    margin-left: 19px;
+}
+.pagination ul li {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 29px;
+}
+.pagination ul li a {
+    text-decoration: none;
+    line-height: 29px;
+    padding: 0 3px;
+}
+.pagination ul li .goTo {
+    margin-right: 9px;
+    position: relative;
+    bottom: 1px;
+    padding: 0;
+}
+.pagination ul li .goTo:before {
+    background: url("../img/admin_sprite.png") no-repeat scroll -99px -5px transparent;
+    content: " ";
+    display: inline-block;
+    height: 9px;
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+    width: 9px;
+}
+.pagination ul li .prev {
+    margin-right: 4px;
+    position: relative;
+    bottom: 1px;
+    padding: 0;
+}
+.pagination ul li .prev:before {
+    background: url("../img/admin_sprite.png") no-repeat scroll -113px -3px transparent;
+    content: " ";
+    display: inline-block;
+    height: 11px;
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+    width: 6px;
+}
+.pagination ul li .next {
+    bottom: 1px;
+    margin-left: 13px;
+    padding: 0;
+    position: relative;
+}
+.pagination ul li .next:after {
+    background: url("../img/admin_sprite.png") no-repeat scroll -123px -3px transparent;
+    content: " ";
+    display: inline-block;
+    height: 11px;
+    margin-left: 4px;
+    position: relative;
+    top: 2px;
+    width: 6px;
+}
+.pagination .small {
+    font-size: 10px;
+}
+.pagination .selected {
+    background: url("../img/pagination-select.png") no-repeat scroll 0 7px transparent;
+    height: 29px;
+    width: 15px;
+}
+.pagination .selected a {
+    font-weight: bold;
+    color: #ff6600;
+}
