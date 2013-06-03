@@ -1298,12 +1298,14 @@ td {
 .pagination ul li {
     display: inline-block;
     font-size: 12px;
-    line-height: 29px;
+    line-height: 9px;
+    margin-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .pagination ul li a {
     text-decoration: none;
-    line-height: 29px;
-    padding: 0 3px;
 }
 .pagination ul li .goTo {
     margin-right: 9px;
@@ -1337,6 +1339,12 @@ td {
     top: 2px;
     width: 6px;
 }
+.pagination ul li:first-child,
+.pagination ul li:nth-child(2),
+.pagination ul li:last-child {
+    padding-left: 0;
+    padding-right: 0;
+}
 .pagination ul li .next {
     bottom: 1px;
     margin-left: 13px;
@@ -1357,9 +1365,27 @@ td {
     font-size: 10px;
 }
 .pagination .selected {
-    background: url("../img/pagination-select.png") no-repeat scroll 0 7px transparent;
-    height: 29px;
-    width: 15px;
+    background: url("../img/active_number_center.png") repeat-x scroll 0 3px transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+.pagination .selected:before {
+    background: url("../img/active_number_left.png") no-repeat scroll 0 0 transparent;
+    content: " ";
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    top: 3px;
+    width: 5px;
+}
+.pagination .selected:after {
+    background: url("../img/active_number_right.png") no-repeat scroll 0 0 transparent;
+    content: " ";
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    top: 3px;
+    width: 5px;
 }
 .pagination .selected a {
     font-weight: bold;
