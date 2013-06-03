@@ -830,19 +830,19 @@ td {
     font-size: 16px;
     font-weight: 600;
 }
-.rightSide {
+#footer .rightSide {
     float: right;
     margin: 33px 52px 0 0;
 }
-.footerLogo {
+#footer .footerLogo {
     float: left;
     margin: 24px 8px 0 56px;
 }
-.leftSide > a {
+#footer .leftSide > a {
     float: left;
     margin-top: 23px;
 }
-.deepLogo {
+#footer .deepLogo {
     margin-right: 5px;
     position: relative;
     top: 4px;
@@ -1390,4 +1390,218 @@ td {
 .pagination .selected a {
     font-weight: bold;
     color: #ff6600;
+}
+
+/*------------------------------------------------------ Events Editor -----------------------------------------------*/
+
+#eventsEditor .eventsNav {
+    margin-top: 14px;
+    height: 55px;
+}
+#eventsEditor .eventsNav .leftSide {
+    float: left;
+    padding: 10px 22px 11px 0;
+    margin: 0 0 12px 23px;
+    border-right: 1px solid #eae9d8;
+}
+#eventsEditor .eventsNav .prevEvent {
+    float: left;
+    width: 300px;
+    margin-top: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+#eventsEditor .eventsNav .nextEvent {
+    float: right;
+    width: 300px;
+    margin-top: 5px;
+    text-align: right;
+    cursor: pointer;
+}
+#eventsEditor .eventsNav .prevEvent span {
+    background: url("../img/admin_sprite.png") no-repeat scroll -238px -26px transparent;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 26px;
+    margin-right: 11px;
+    width: 9px;
+}
+#eventsEditor .eventsNav .nextEvent span {
+    background: url("../img/admin_sprite.png") no-repeat scroll -252px -26px transparent;
+    display: block;
+    float: right;
+    height: 30px;
+    margin-left: 11px;
+    margin-right: 23px;
+    width: 9px;
+}
+#eventsEditor .eventsNav .prevEvent p,
+#eventsEditor .eventsNav .nextEvent p {
+    font-family: "Open Sans",sans-serif;
+    font-size: 10px;
+    line-height: 11px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+#eventsEditor .eventsNav .prevEvent a,
+#eventsEditor .eventsNav .nextEvent a {
+    font-size: 12px;
+    display: block;
+}
+#eventsEditor .header {
+    clear: both;
+    height: 93px;
+    border-bottom: 1px solid #ffffff;
+    background-color: #eae9d8;
+    border-top: 1px solid #ececdd;
+    padding: 0 21px;
+}
+#eventsEditor .header h2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 9px 10px 6px 0;
+}
+#eventsEditor .header h4 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    padding-top: 4px;
+}
+#eventsEditor .header h2 .eventName {
+    text-decoration: none;
+}
+#eventsEditor .header p {
+    font-size: 10px;
+}
+#eventsEditor .header .leftSide {
+    border-right: 1px solid #FFFFFF;
+    display: inline-block;
+    padding: 0 23px 6px 0;
+}
+#eventsEditor .header .leftSide a {
+    text-transform: uppercase;
+}
+#eventsEditor .header .rightSide {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0 23px 6px 0;
+}
+#eventsEditor .header .rightSide span {
+    color: #2062b3;
+}
+#eventsEditor .content table tr td {
+    vertical-align: top;
+}
+#eventsEditor .content table tr .title {
+    width: 207px;
+    background-color: #eae9d8;
+}
+#eventsEditor .content table tr .title.head {
+    background: url("../img/title-head-shadow.png") repeat-x scroll center top #EAE9D8;
+}
+#eventsEditor .content table tr .title.otherBg1 {
+    background-color: #f3f2e2;
+}
+#eventsEditor .content table tr .title p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 17px 15px 0 13px;
+}
+#eventsEditor .content table tr .title p span {
+    color: #980f0f;
+    font-size: 16px;
+}
+#eventsEditor .content table tr .description {
+    background-color: #f5f5eb;
+    width: 580px;
+    padding-left: 13px;
+}
+#eventsEditor .content table tr .description .eventNameInput,
+#eventsEditor .content table tr .description .partnerInput {
+    width: 314px;
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    margin-top: 17px;
+}
+
+#eventsEditor .content table tr .description.otherBg2 {
+    background-color: #f9f9f5;
+}
+#eventsEditor .content table tr .description.head {
+    background: url("../img/description-head-shadow.png") repeat-x scroll center top #f5f5eb;
+}
+
+
+
+
+
+
+#eventsEditor .footer {
+    background: url("../img/title-head-shadow.png") repeat-x scroll center top #eae9d8;
+    height: 68px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #edecdd;
+    width: 100%;
+}
+/*----- Buttons -----*/
+#eventsEditor .eventsNav .leftSide .backToListBtn,
+#eventsEditor .eventsNav .leftSide .backToListBtn:hover {
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: url('../img/admin_sprite.png') no-repeat -2px -120px;
+    width: 103px;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+    text-indent: 10px;
+}
+#eventsEditor .header .approveBtn,
+#eventsEditor .header .approveBtn:hover {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    background: url('../img/admin_sprite.png') no-repeat -111px -120px;
+    width: 88px;
+    height: 22px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-indent: 17px;
+    position: relative;
+    bottom: 1px;
+}
+#eventsEditor .footer .updateBtn {
+    background: url('../img/admin_sprite.png') no-repeat -2px -58px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    width: 273px;
+    text-align: center;
+    margin-left: 264px;
+    margin-top: 21px;
+}
+#eventsEditor .footer .updateBtn input {
+    cursor: pointer;
+    height: 30px;
+    margin-left: -169px;
+    position: absolute;
+    width: 273px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
 }
