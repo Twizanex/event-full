@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add/Edit Events</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/custom_form.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="js/PIE_IE678.js"></script>
+    <script>
+        function cleanupPIE() {
+            try {
+                var PIE = window[ 'PIE' ];
+                if (PIE) {
+                    PIE['detach']( el );
+                    PIE = el = 0;
+                }
+            } catch (e) {}
+        }
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div id="events" class="wrapper">
+    <div id="header">
+        <div class="headBar"></div>
+        <div class="adminHeadShadow"></div>
+    </div>
+    <div id="section">
+        <div id="adminTabs">
+            <a href="index.html"><span class="icon"></span>Events Search</a>
+            <ul class="nav">
+                <li><a href="#events-admin" class="current moveLeft">Events</a></li>
+                <li><a href="#partners" class="">Partners</a></li>
+                <li><a href="#editors" style="right: 1px">Editors</a></li>
+                <li><a href="#help" style="right: 1px" class="moveRight">Need Help?</a></li>
+            </ul>
+            <div class="wrap-list">
+                <div id="eventsEditor">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
