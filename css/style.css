@@ -680,7 +680,18 @@ td {
     height: 22px;
     width: 155px;
 }
-
+#eventsEditor .content table tr td .timeZone .styled-select {
+    background: url("../img/time-select.png") repeat scroll 0 0 transparent;
+    font-size: 14px;
+    height: 22px;
+    padding-left: 9px;
+    padding-top: 2px;
+    width: 75px;
+}
+#eventsEditor .content table tr td .timeZone #selectTimeZone {
+    width: 75px;
+    height: 22px;
+}
 /*-----  buttons  -----*/
 
 .adminBtn {
@@ -1546,7 +1557,7 @@ td {
 }
 #eventsEditor .content table tr .description .eventNameInput,
 #eventsEditor .content table tr .description .partnerInput {
-    width: 314px;
+    width: 308px;
     border: 1px solid #9ba6b3;
     padding: 3px;
     -moz-border-radius: 3px;
@@ -1558,18 +1569,194 @@ td {
     margin-top: 17px;
 }
 
-#eventsEditor .content table tr .description.otherBg2 {
-    background-color: #f9f9f5;
+#eventsEditor .content table tr .description.otherBg2 { background-color: #f9f9f5; }
+#eventsEditor .content table tr .description.head { background: url("../img/description-head-shadow.png") repeat-x scroll center top #f5f5eb; }
+#eventsEditor .content table tr .description .param { margin-right: 13px; border-bottom: 1px solid #eae9d8; padding-bottom: 9px; }
+#eventsEditor .content table tr .description table tr td { line-height: 16px; }
+#eventsEditor .content table tr .description table tr td input { margin-right: 8px; }
+#eventsEditor .content table tr .description .subject { padding-top: 5px; }
+#eventsEditor .content table tr .description .subject p span { font-size: 16px; color: #980f0f; }
+#eventsEditor .content table tr .description .subject table td { min-width: 114px; }
+#eventsEditor .content table tr .description .param p { font-size: 14px; margin: 9px 0 1px 2px; }
+#eventsEditor .content table tr .description .param > table { position: relative; right: 4px; }
+#eventsEditor .content table tr .description .subject table td { min-width: 114px; }
+#eventsEditor .content table tr .description .type table td { min-width: 170px; }
+#eventsEditor .content table tr .description .access input { margin-right: 6px; }
+#eventsEditor .content table tr .description .access label { margin-right: 30px; }
+#eventsEditor .content table tr .description .format table td { min-width: 130px; }
+#eventsEditor .content table tr .description .school { border: none; padding-bottom: 21px}
+#eventsEditor .content table tr .description .school input {
+    width: 308px;
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    margin-top: 8px;
 }
-#eventsEditor .content table tr .description.head {
-    background: url("../img/description-head-shadow.png") repeat-x scroll center top #f5f5eb;
+#eventsEditor .content table tr .description .detailsInput {
+    width: 308px;
+    height: 45px;
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    margin: 17px 0 18px 0;
+}
+#eventsEditor .content table tr .description table .address td p {
+    margin-top: 11px;
+}
+#eventsEditor .content table tr .description table .whereInput1 {
+    border: 1px solid #9BA6B3;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 15px;
+    margin-right: 14px;
+    padding: 3px;
+    position: relative;
+    right: 2px;
+    width: 168px;
+    z-index: 1;
+}
+#eventsEditor .content table tr .description table .whereInput2 {
+    width: 338px;
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    margin-bottom: 15px;
+}
+#eventsEditor .content table tr .description .start p,
+#eventsEditor .content table tr .description .timeZone p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+#eventsEditor .content table tr .description .timeZone {
+    border-bottom: 1px solid #EAE9D8;
+    padding-bottom: 14px;
+}
+#eventsEditor .content table tr .description .start {
+    margin-bottom: 18px;
+}
+#eventsEditor .content table tr .description .start div .visible,
+#eventsEditor .content table tr .description .start div .hidden {
+    display: inline-block;
+}
+#eventsEditor .content table tr .description .start div .dateInput {
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    width: 82px;
+}
+#eventsEditor .content table tr .description .start div .timeInput {
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    width: 42px;
+    margin-left: 3px;
+}
+#eventsEditor .content table tr .description .start div .calendarIcon {
+    margin-right: 3px;
+}
+#eventsEditor .content table tr .description .start .visible {
+    font-size: 12px;
+}
+#eventsEditor .content table tr .description .ticketsInput {
+    border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    width: 308px;
+    margin: 18px 0 17px 0;
+}
+#eventsEditor .content table tr .description .eventPicInput,
+#eventsEditor .content table tr .description .partnerLogoInput,
+#eventsEditor .content table tr .description .partnerPicInput {
+    /*border: 1px solid #9ba6b3;
+    padding: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(PIE.htc);
+    z-index: 1;
+    position: relative;
+    width: 308px;*/
+    margin-top: 16px;
 }
 
-
-
-
-
-
+#eventsEditor .content table tr .description .view,
+#eventsEditor .content table tr .description .viewExpanded {
+    background: url("../img/admin_sprite.png") no-repeat scroll -31px -5px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 19px;
+    margin-left: 3px;
+    margin-top: 8px;
+    width: 17px;
+}
+#eventsEditor .content table tr .description .view span {
+    font-size: 8px;
+    text-decoration: underline;
+    color: #2062b3;
+    text-align: center;
+}
+#eventsEditor .content table tr .description .viewExpanded span {
+    background: url("../img/admin_sprite.png") no-repeat scroll -214px -6px transparent;
+    display: block;
+    height: 4px;
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 8px;
+}
+#eventsEditor .content table tr .description .explanation {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+#eventsEditor .content table tr .description .example {
+    position: relative;
+    right: 13px;
+    width: 593px;
+    height: 345px;
+}
+#eventsEditor .content table tr .description .close {
+    background: url('../img/admin_sprite.png') no-repeat -238px -1px;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    margin-top: 10px;
+}
 #eventsEditor .footer {
     background: url("../img/title-head-shadow.png") repeat-x scroll center top #eae9d8;
     height: 68px;
@@ -1630,4 +1817,26 @@ td {
     width: 273px;
     opacity: 0;
     filter: alpha(opacity = 0);
+}
+.endTimeBtn1,
+.endTimeBtn1:hover,
+.endTimeBtn2,
+.endTimeBtn2:hover
+{
+    background: url('../img/admin_sprite.png') no-repeat -266px -31px;
+    width: 71px;
+    height: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 22px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.endTimeBtn1 span,
+.endTimeBtn2 span {
+    font-size: 12px;
 }
