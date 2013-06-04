@@ -8,6 +8,37 @@
     <script type="text/javascript" src="js/tabs.js"></script>
     <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
     <script type="text/javascript" src="js/custom_form.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('#selectTimeZone').each(function(){
+                customForm.style(this);
+            });
+
+            $('input[placeholder], textarea[placeholder]').placeholder();
+
+            $('.endTimeBtn1, .endTimeBtn2').click(function () {
+                $('.hidden').toggle();
+                $('.endTimeBtn1').toggle();
+                $('.endTimeBtn2').toggle();
+            });
+
+            $('#view1, #viewExpanded1, #close1').click(function() {
+                $('#view1').toggle();
+                $('#viewExpanded1').toggle();
+                $("#example1").slideToggle(400);
+            });
+            $('#view2, #viewExpanded2, #close2').click(function() {
+                $('#view2').toggle();
+                $('#viewExpanded2').toggle();
+                $("#example2").slideToggle(400);
+            });
+            $('#view3, #viewExpanded3, #close3').click(function() {
+                $('#view3').toggle();
+                $('#viewExpanded3').toggle();
+                $("#example3").slideToggle(400);
+            });
+        })
+    </script>
     <!--[if lte IE 8]>
     <script type="text/javascript" src="js/PIE_IE678.js"></script>
     <script>
@@ -89,49 +120,182 @@
                                 <td class="title">
                                     <p>Search Parameters <span>*</span></p>
                                 </td>
-                                <td class="description"></td>
+                                <td class="description">
+                                    <div class="subject param">
+                                        <p><strong>Subject <span>*</span></strong></p>
+                                        <table>
+                                            <tr>
+                                                <td><input type="checkbox" id="subject1"><label for="subject1">GMAT: Verbal</label></td>
+                                                <td><input type="checkbox" id="subject2"><label for="subject2">GMAT: Quantitative</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="subject3"><label for="subject3">MBA</label></td>
+                                                <td><input type="checkbox" id="subject4"><label for="subject4">Announcement</label></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="type param">
+                                        <p>Type</p>
+                                        <table>
+                                            <tr>
+                                                <td><input type="checkbox" id="type1"><label for="type1">School Application Date</label></td>
+                                                <td><input type="checkbox" id="type2"><label for="type2">School Decision_date</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="type3"><label for="type3">Discounts</label></td>
+                                                <td><input type="checkbox" id="type4"><label for="type4">Other(e.g. MBA tour or reception)</label></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="access param">
+                                        <p>Access</p>
+                                        <input type="radio" id="access1" name="access"><label for="access1">Free</label>
+                                        <input type="radio" id="access2" name="access"><label for="access2">Paid</label>
+                                    </div>
+                                    <div class="format param">
+                                        <p>Format</p>
+                                        <table>
+                                            <tr>
+                                                <td><input type="checkbox" id="format1"><label for="format1">Meeting(offline)</label></td>
+                                                <td><input type="checkbox" id="format2"><label for="format2">Seminar(offline)</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="format3"><label for="format3">Webinar</label></td>
+                                                <td><input type="checkbox" id="format4"><label for="format4">Chat</label></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="school param">
+                                        <p>School</p>
+                                        <input type="text" class="schoolInput" />
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title otherBg1">
                                     <p>Details <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2"></td>
+                                <td class="description otherBg2">
+                                    <textarea class="detailsInput"></textarea>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title">
                                     <p>Where</p>
                                 </td>
-                                <td class="description"></td>
+                                <td class="description">
+                                    <table>
+                                        <tr class="address">
+                                            <td><p>City</p></td>
+                                            <td><p>Address</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="whereInput1"/></td>
+                                            <td><input type="text" class="whereInput2"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title otherBg1">
                                     <p>When <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2"></td>
+                                <td class="description otherBg2">
+                                    <div class="timeZone">
+                                        <p>Timezone</p>
+                                        <select id="selectTimeZone">
+                                            <option selected="selected">UTC +3</option>
+                                            <option>UTC +3</option>
+                                            <option>UTC +3</option>
+                                            <option>UTC +3</option>
+                                            <option>UTC +3</option>
+                                            <option>UTC +3</option>
+                                        </select>
+                                    </div>
+                                    <div class="start">
+                                        <p>Start</p>
+                                        <div>
+                                            <div class="visible">
+                                                <input type="text" placeholder="mm / dd / yy" class="dateInput" />
+                                                <span class="calendarIcon"></span> at
+                                                <input type="text" placeholder="- - : - -" class="timeInput" />
+                                            </div>
+                                            <div class="hidden" style="display: none">
+                                                <img src="img/arrow.png" />
+                                                <input type="text" placeholder="mm / dd / yy" class="dateInput" />
+                                                <span class="calendarIcon"></span>
+                                                <input type="text" placeholder="- - : - -" class="timeInput" />
+                                            </div>
+                                            <span class="endTimeBtn1"><span>+</span> End Time</span>
+                                            <span class="endTimeBtn2" style="display: none"><span>-</span> End Time</span>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title">
                                     <p>Tickets (add link)</p>
                                 </td>
-                                <td class="description"></td>
+                                <td class="description">
+                                    <input class="ticketsInput" placeholder="http://www.example.com/" type="text" />
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title otherBg1">
                                     <p>Facebook Event Page picture <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2"></td>
+                                <td class="description otherBg2">
+                                    <input class="eventPicInput" placeholder="" type="file" /><br />
+                                    <div id="view1" class="view">
+                                        <span>view</span>
+                                    </div>
+                                    <div id="viewExpanded1" class="viewExpanded" style="display: none;">
+                                        <span></span>
+                                    </div>
+                                    <p class="explanation"><strong>Minimal size 180x180 px</strong><br />Should be square (height = width)</p>
+                                    <div id="example1" class="example" style="display: none">
+                                        <div id="close1" class="close"></div>
+                                        <img src="img/how-to1.png">
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title">
                                     <p>GMAT Club Forum partner Logo <span>*</span></p>
                                 </td>
-                                <td class="description"></td>
+                                <td class="description">
+                                    <input class="partnerLogoInput" placeholder="" type="file" /><br />
+                                    <div id="view2" class="view">
+                                        <span>view</span>
+                                    </div>
+                                    <div id="viewExpanded2" class="viewExpanded" style="display: none;">
+                                        <span></span>
+                                    </div>
+                                    <p class="explanation"><strong>Select an image up to 4 Mb max</strong><br />Має бути на білому фоні!</p>
+                                    <div id="example2" class="example" style="display: none">
+                                        <div id="close2" class="close"></div>
+                                        <img src="img/how-to1.png">
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="title otherBg1">
                                     <p>GMAT Club Forum partner picture <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2"></td>
+                                <td class="description otherBg2">
+                                    <input class="partnerPicInput" placeholder="" type="file" /><br />
+                                    <div id="view3" class="view">
+                                        <span>view</span>
+                                    </div>
+                                    <div id="viewExpanded3" class="viewExpanded" style="display: none;">
+                                        <span></span>
+                                    </div>
+                                    <p class="explanation"><strong>Select an image up to 4 Mb max</strong><br />If you want to show some other picture instead of partner logo on the GMAT <br /> Club Forum (e. g. for discounts or announcement), please, upload it here.</p>
+                                    <div id="example3" class="example" style="display: none">
+                                        <div id="close3" class="close"></div>
+                                        <img src="img/how-to1.png">
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>
