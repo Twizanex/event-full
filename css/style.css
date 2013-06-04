@@ -473,7 +473,27 @@ td {
 .smallInput {
     width: 85px;
 }
-
+#advanced-search .keywordsPlace .description {
+    margin-left: 5px;
+}
+#advanced-search .keywordsPlace .description .tip {
+    font-size: 10px;
+    margin: 5px 0 7px 10px;
+}
+#advanced-search .keywordsPlace .description .tip span {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 3px;
+    color: #2062b3;
+    /*padding-bottom: 2px;*/
+    border-bottom: 1px dashed #2062b3;
+}
+#advanced-search .keywordsPlace .description .textInput {
+    margin-top: 10px;
+}
+#advanced-search .keywordsPlace .caption {
+    float: left;
+}
 /*-----  #discounts  -----*/
 
 #discounts {
@@ -572,7 +592,13 @@ td {
 }
 .date, .time {
     display: inline-block;
-    width: 155px;
+}
+.date {
+    margin-right: 25px !important;
+    margin-left: 5px !important;
+}
+.time {
+    margin-right: 5px !important;
 }
 .date:before {
     background: url('../img/main_sprite.png') no-repeat -157px -69px;
