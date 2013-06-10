@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Add/Edit Events</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/tabs.js"></script>
     <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
     <script type="text/javascript" src="js/custom_form.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type='text/javascript'>
         $(document).ready(function(){
             $('#selectTimeZone').each(function(){
@@ -325,9 +327,49 @@
                         </table>
                     </div>
                     <div class="footer">
-                        <div class="updateBtn">
+                        <!--<div class="updateBtn">
                             Update
                             <input type="submit" />
+                        </div> -->
+                        <a href="#myModal" role="button" class="updateBtn" data-toggle="modal">Update</a>
+                    </div>
+                    <!-- Modal -->
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <div class="closeBtn">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            </div>
+                            <h3 id="myModalLabel">This event was successfully created on Facebook.</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Now Event Page is opened in the next browser tab.
+                                Please, go there and add hosts to the Event Page. When you finish adding hosts, turn
+                                back here and click button below “Hosts added. Show next Event”.
+                            </p>
+                            <p>
+                                Note:<br/>
+                                1) If you do not add hosts, only GMAT Club administrators will be able to edit this
+                                event on the Facebook Event Page – BUT NOT Partners (who would like to make event
+                                promotion and won’t do this not being an event host).<br/>
+                                2) Partners will become Event hosts after they join the Event Page on Facebook.
+                            </p>
+                        </div>
+                        <div class="modal-body">
+                            <p class="createdBy">Event was created by <a href="#">User FB Name 3.</a></p>
+                            <p class="otherEdit">Other Partner Name A Editors:</p>
+                            <ul>
+                                <li><a href="#">User FB Name 9</a></li>
+                                <li><a href="#">User FB Name 14</a></li>
+                                <li><a href="#">User FB Name 19</a></li>
+                                <li><a href="#">User FB Name 27</a></li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="submitBtn">
+                                hosts added. show next event
+                                <button class="btn btn-primary">Save changes</button>
+                            </div>
                         </div>
                     </div>
                 </div>
