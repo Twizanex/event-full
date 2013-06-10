@@ -1,0 +1,27 @@
+/*!
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { display: table; content: ""; line-height: 0; }
+.clearfix:after { clear: both; }
+.hide-text { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+.input-block-level { display: block; width: 100%; min-height: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.modal-backdrop { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #ffffff; }
+.modal-backdrop.fade { opacity: 0; }
+.modal-backdrop, .modal-backdrop.fade.in { opacity: 0.6; filter: alpha(opacity=60); }
+.modal { position: fixed; top: 25%; left: 50%; z-index: 1050; margin-left: -313px; background-color: #f3f2e2; -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); -webkit-background-clip: padding-box; -moz-background-clip: padding-box; background-clip: padding-box; outline: none; }
+.modal.fade { -webkit-transition: opacity .3s linear, top .3s ease-out; -moz-transition: opacity .3s linear, top .3s ease-out; -o-transition: opacity .3s linear, top .3s ease-out; transition: opacity .3s linear, top .3s ease-out; top: -100%; }
+.modal.fade.in { top: 10%; }
+.modal-header { padding: 9px 15px; border-bottom: 1px solid #bdbdbc; }
+.modal-header .close { margin-top: 2px; }
+.modal-header h3 { line-height: 30px; margin: 4px 0 8px 12px; }
+.modal-body { position: relative; overflow-y: auto; max-height: 400px; }
+.modal-form { margin-bottom: 0; }
+.modal-footer { padding: 17px 0 18px 124px; margin-bottom: 0; text-align: center; *zoom: 1; }
+
