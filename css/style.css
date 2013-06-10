@@ -678,7 +678,7 @@ td {
 }
 #selectPartner {
     height: 22px;
-    width: 155px;
+    width: 165px;
 }
 #eventsEditor .content table tr td .timeZone .styled-select {
     background: url("../img/time-select.png") repeat scroll 0 0 transparent;
@@ -689,7 +689,7 @@ td {
     width: 75px;
 }
 #eventsEditor .content table tr td .timeZone #selectTimeZone {
-    width: 75px;
+    width: 84px;
     height: 22px;
 }
 /*-----  buttons  -----*/
@@ -1250,11 +1250,11 @@ td {
 #events-admin .addEvent .addEventBtn {
     background: url('../img/admin_sprite.png') no-repeat -3px -23px;
     width: 141px;
-    height: 30px;
+    height: 31px;
     color: #FFFFFF;
     font-family: Tahoma,geneva,sans-serif;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 31px;
     text-align: center;
     text-indent: 28px;
     margin: 12px 0;
@@ -1694,21 +1694,6 @@ td {
     width: 308px;
     margin: 18px 0 17px 0;
 }
-#eventsEditor .content table tr .description .eventPicInput,
-#eventsEditor .content table tr .description .partnerLogoInput,
-#eventsEditor .content table tr .description .partnerPicInput {
-    /*border: 1px solid #9ba6b3;
-    padding: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    behavior: url(PIE.htc);
-    z-index: 1;
-    position: relative;
-    width: 308px;*/
-    margin-top: 16px;
-}
-
 #eventsEditor .content table tr .description .view,
 #eventsEditor .content table tr .description .viewExpanded {
     background: url("../img/admin_sprite.png") no-repeat scroll -31px -5px transparent;
@@ -1717,7 +1702,7 @@ td {
     float: left;
     height: 19px;
     margin-left: 3px;
-    margin-top: 8px;
+    margin-top: 2px;
     width: 17px;
 }
 #eventsEditor .content table tr .description .view span {
@@ -1740,7 +1725,6 @@ td {
     line-height: 12px;
     margin-bottom: 10px;
     margin-left: 14px;
-    margin-top: 6px;
 }
 #eventsEditor .content table tr .description .example {
     position: relative;
@@ -1757,12 +1741,53 @@ td {
     right: 10px;
     margin-top: 10px;
 }
+
+#eventsEditor .content table tr .description .fileInputTextbox {
+    border: 1px solid #9BA6B3;
+    border-radius: 3px ;
+    -moz-border-radius: 3px ;
+    -webkit-border-radius: 3px ;
+    float: left;
+    margin: 4px 9px 0 0;
+    padding: 3px;
+    width: 308px;
+}
+#eventsEditor .content table tr .description .fileInputDiv {
+    height: 22px;
+    margin: 5px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+}
+#eventsEditor .content table tr .description .fileInputDiv .fileInputButton {
+    background: url("../img/admin_sprite.png") no-repeat scroll -281px -58px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 22px;
+    padding: 0 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 55px;
+}
+#eventsEditor .content table tr .description .fileInputDiv .fileInputHidden {
+    font-size: 45px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    filter: alpha(opacity = 0);
+}
 #eventsEditor .footer {
     background: url("../img/title-head-shadow.png") repeat-x scroll center top #eae9d8;
     height: 68px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #edecdd;
     width: 100%;
+}
+.paddingTop {
+    padding-top: 12px;
 }
 /*----- Buttons -----*/
 #eventsEditor .eventsNav .leftSide .backToListBtn,
