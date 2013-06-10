@@ -897,7 +897,7 @@ td {
     height: 4px;
     width: 100%;
 }
-#adminTabs > a {
+#adminMenu > a {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -923,7 +923,7 @@ td {
     text-transform: uppercase;
     text-decoration: none;
 }
-#adminTabs > a .icon {
+#adminMenu > a .icon {
     background: url("../img/admin_sprite.png") no-repeat scroll -2px -2px transparent;
     display: inline-block;
     height: 17px;
@@ -933,7 +933,7 @@ td {
     top: 3px;
     width: 23px;
 }
-#adminTabs .nav li a:active {
+#adminMenu .nav li a:active {
     color: #2062b3;
 }
 #events-admin .synchronizeInfo {
@@ -1268,23 +1268,23 @@ td {
 }
 
 
-/*----- Admin Tabs -----*/
-#adminTabs {
+/*----- Admin Menu -----*/
+#adminMenu {
     background-color: #f3f3eb;
 }
-#adminTabs .nav {
+#adminMenu .nav {
     overflow: hidden;
     margin: 0;
     padding-left: 399px;
     position: relative;
     top: 1px;
 }
-#adminTabs .nav li {
+#adminMenu .nav li {
     float: left;
     margin: 0;
     list-style-type: none;
 }
-#adminTabs .nav li a {
+#adminMenu .nav li a {
     background: none repeat scroll 0 0 #F9F9F5;
     border-color: #B8B8B8 #B8B8B8 #2062B3;
     border-style: solid;
@@ -1304,7 +1304,7 @@ td {
     text-decoration: none;
     font-size: 14px;
 }
-#adminTabs .current {
+#adminMenu .current {
     background: none repeat scroll 0 0 #FFFFFF !important;
     border: 1px solid #2062B3 !important;
     color: #2062B3 !important;
@@ -1313,17 +1313,17 @@ td {
     top: 2px;
     z-index: 2;
 }
-#adminTabs .wrap-list {
+#adminMenu .wrap-list {
     border-top: 1px solid #2062b3;
     z-index: -99999;
     background: none repeat scroll 0 0 #FFFFFF;
 }
 
-#adminTabs .moveLeft {
+#adminMenu .moveLeft {
     left: 1px;
 }
 
-#adminTabs .moveRight {
+#adminMenu .moveRight {
     right: 1px;
 }
 
