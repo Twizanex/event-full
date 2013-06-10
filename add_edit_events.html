@@ -39,6 +39,19 @@
             });
         })
     </script>
+    <script>
+        function fileBasename(path, suffix) {
+            var b = path.replace(/^.*[\/\\]/g, '');
+            if (typeof(suffix) == 'string' && b.substr(b.length - suffix.length) == suffix) {
+                b = b.substr(0, b.length - suffix.length);
+            }
+            return b;
+        }
+        function setBaseName(element) {
+            var file_name = element.value;
+            document.getElementById('fileName').value = fileBasename(file_name);
+        }
+    </script>
     <!--[if lte IE 8]>
     <script type="text/javascript" src="js/PIE_IE678.js"></script>
     <script>
@@ -244,8 +257,12 @@
                                 <td class="title otherBg1">
                                     <p>Facebook Event Page picture <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2">
-                                    <input class="eventPicInput" placeholder="" type="file" /><br />
+                                <td class="description otherBg2 paddingTop">
+                                    <input type="text" onFocus="onFocusView(this)" onBlur="onBlurView(this)" id="fileName1" class="fileInputTextbox" readonly="readonly">
+                                    <div class="fileInputDiv">
+                                        <input type="button" value="Open" class="fileInputButton" />
+                                        <input type="file" name="fileupload" size="40" maxlength="{FILESIZE}" value="" class="fileInputHidden" onchange="setBaseName(this);" />
+                                    </div>
                                     <div id="view1" class="view">
                                         <span>view</span>
                                     </div>
@@ -263,8 +280,12 @@
                                 <td class="title">
                                     <p>GMAT Club Forum partner Logo <span>*</span></p>
                                 </td>
-                                <td class="description">
-                                    <input class="partnerLogoInput" placeholder="" type="file" /><br />
+                                <td class="description paddingTop">
+                                    <input type="text" onFocus="onFocusView(this)" onBlur="onBlurView(this)" id="fileName2" class="fileInputTextbox" readonly="readonly">
+                                    <div class="fileInputDiv">
+                                        <input type="button" value="Open" class="fileInputButton" />
+                                        <input type="file" name="fileupload" size="40" maxlength="{FILESIZE}" value="" class="fileInputHidden" onchange="setBaseName(this);" />
+                                    </div>
                                     <div id="view2" class="view">
                                         <span>view</span>
                                     </div>
@@ -282,8 +303,12 @@
                                 <td class="title otherBg1">
                                     <p>GMAT Club Forum partner picture <span>*</span></p>
                                 </td>
-                                <td class="description otherBg2">
-                                    <input class="partnerPicInput" placeholder="" type="file" /><br />
+                                <td class="description otherBg2 paddingTop">
+                                    <input type="text" onFocus="onFocusView(this)" onBlur="onBlurView(this)" id="fileName3" class="fileInputTextbox" readonly="readonly">
+                                    <div class="fileInputDiv">
+                                        <input type="button" value="Open" class="fileInputButton" />
+                                        <input type="file" name="fileupload" size="40" maxlength="{FILESIZE}" value="" class="fileInputHidden" onchange="setBaseName(this);" />
+                                    </div>
                                     <div id="view3" class="view">
                                         <span>view</span>
                                     </div>
