@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admin control panel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/custom_form.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('.hideAction, .showAction').click(function () {
+                $('.eventsList').slideToggle(400);
+                $('.hideAction'). toggle();
+                $('.showAction').toggle();
+                $('#teeth').slideToggle(400);
+            });
+
+            $('#selectPartner').each(function(){
+                customForm.style(this);
+            });
+
+            $('input[placeholder], textarea[placeholder]').placeholder();
+
+            $('.bodyRow').hover(function(){
+                $(this).addClass('hover');
+                $(this).prev('.bodyRow').addClass('hoverPrev');
+                $(this).next('.bodyRow').addClass('hoverNext');
+                if($(this).index() == 1)
+                    $(this).children('td').css('border-top', 'none');
+            }, function(){
+                $(this).removeClass('hover');
+                $(this).prev('.bodyRow').removeClass('hoverPrev');
+                $(this).next('.bodyRow').removeClass('hoverNext');
+            });
+        })
+    </script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="js/PIE_IE678.js"></script>
+    <script>
+        function cleanupPIE() {
+            try {
+                var PIE = window[ 'PIE' ];
+                if (PIE) {
+                    PIE['detach']( el );
+                    PIE = el = 0;
+                }
+            } catch (e) {}
+        }
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div id="events" class="wrapper">
+    <div id="header">
+        <div class="headBar"></div>
+        <div class="adminHeadShadow"></div>
+    </div>
+    <div id="section">
+        <div id="adminMenu">
+            <a href="index.html"><span class="icon"></span>Events Search</a>
+            <ul class="nav">
+                <li><a href="admin_events.html" class="moveLeft">Events</a></li>
+                <li><a href="admin_partners.html" class="current">Partners</a></li>
+                <li><a href="admin_editors.html" style="right: 1px">Editors</a></li>
+                <li><a href="admin_help.html" style="right: 2px" class="moveRight">Need Help?</a></li>
+            </ul>
+            <div class="wrap-list">
+                <div id="partners">Here would be some content</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
