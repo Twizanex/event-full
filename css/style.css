@@ -1915,4 +1915,11 @@ td {
                                  text-align: center; text-transform: uppercase; font-size: 12px; font-weight: bold;
                                  color: #ffffff; line-height: 22px; text-indent: 22px; }
 .submitBtn button              { width: 296px; height: 22px; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
+/*--------------------------------------------------------------------------------------------------------------------*/
 
+.importantText {
+    color: #920000;
+}
+.importantInput {
+    border-color: #980f0f !important;
+}
